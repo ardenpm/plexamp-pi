@@ -1,0 +1,14 @@
+[Unit]
+Description=PlexAmp Browser Interface
+
+[Service]
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/pi/.Xauthority
+ExecStart=/home/pi/.local/bin/plexamp-ui
+Restart=always
+RestartSec=10s
+TimeoutSec=infinity
+User=pi
+
+[Install]
+WantedBy=graphical.target

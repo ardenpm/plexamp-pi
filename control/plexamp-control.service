@@ -1,0 +1,16 @@
+[Unit]
+Description=Plexamp Rotary Encoder Control
+After=network-online.target
+Requires=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/plexamp
+ExecStart=/home/pi/.local/bin/plexamp-control
+Restart=on-failure
+StandardOutput=journal+console
+StandardError=journal+console
+
+[Install]
+WantedBy=multi-user.target

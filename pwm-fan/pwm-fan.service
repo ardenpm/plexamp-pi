@@ -1,0 +1,11 @@
+[Unit]
+Description=PWM Fan Control
+After=network.target
+
+[Service]
+ExecStart=/home/pi/.local/bin/pwm-fan
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
