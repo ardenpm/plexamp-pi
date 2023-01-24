@@ -54,6 +54,12 @@ Aligning the IO and USB covers while simultaneously lowering the back cover and 
 
 My build used an IQAudio DAC+ hat however this company has since been acquired by the Raspberry Pi Foundation so the above listed Raspberry Pi DAC+ hat is the equivilent model. The layout of the headers may have changed so if you are using that model you might need to make adjustments to the IO cover. The new official Raspberry Pi DAC+ hat also omits the rotary encoder and mute headers, however it includes passthrough of all of the GPIO pins (if the header is soldered to the board) so they can be directly connected there.
 
+#### Other
+
+- [Anti-slip feet or Bumpers](https://www.slipstick.com.au/product/cb147/)
+
+Unless you want to chase it across your desk do yourself a favour and stick some anti-slip pads or rubber bumpers on the underside of the stand.
+
 ### Connections
 
 ![Stack Wiring](https://github.com/ardenpm/plexamp-pi/raw/main/images/photo_stack_1.jpg)
