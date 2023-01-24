@@ -10,6 +10,8 @@ This project is not affiliated with Plex or Plexamp in anyway.
 
 ### 3D Printed Enclosure
 
+![Finished Enclosure](https://github.com/ardenpm/plexamp-pi/raw/main/images/photo_finished_2.jpg)
+
 The enclosure to holds a Raspberry Pi 4, IQudio DAC+, the Raspberry Pi Touchscreen and a rotary encoder. A full CAD model is available in [Onshape](https://onshape.com) here:
 
 [Plexamp Pi Enclosure CAD](https://cad.onshape.com/documents/df243c2479e3554b8c02ccae/w/d451762f250ff1bc25f3b904/e/bc04dc9fd1fc2764ce90258b)
@@ -53,6 +55,8 @@ Aligning the IO and USB covers while simultaneously lowering the back cover and 
 My build used an IQAudio DAC+ hat however this company has since been acquired by the Raspberry Pi Foundation so the above listed Raspberry Pi DAC+ hat is the equivilent model. The layout of the headers may have changed so if you are using that model you might need to make adjustments to the IO cover. The new official Raspberry Pi DAC+ hat also omits the rotary encoder and mute headers, however it includes passthrough of all of the GPIO pins (if the header is soldered to the board) so they can be directly connected there.
 
 ### Connections
+
+![Stack Wiring](https://github.com/ardenpm/plexamp-pi/raw/main/images/photo_stack_1.jpg)
 
 The following connections were used for the initial build. Of course alternative configurations are possible but these have been tested. Check these actually line up with what you have if using this as a guide. No responsibility if you fry your Pi. Of course the wire colours are just what I chose or happened to be already connected to the devices being used.
 
