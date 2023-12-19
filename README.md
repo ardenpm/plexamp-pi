@@ -6,6 +6,8 @@ I wanted a self-contained streamer for [Plexamp](https://plexamp.com/) which wou
 
 This project is not affiliated with Plex or Plexamp in anyway.
 
+**UPDATE**: There is now a [Raspberry Pi 5 Version](#raspberry-pi-5-version) included in this repository. See notes linked for details.
+
 ## Hardware
 
 ### 3D Printed Enclosure
@@ -225,3 +227,19 @@ sudo systemctl enable plexamp-control
 ```
 
 This program makes HTTP requests to your local running Plexamp instance based on those requests it was observed to be making through its webpage. Currently these do not require authentication (at least when requesting from the same host). This is however not a published API from Plex so it could change at anytime. If you need to modify the URLs you can change them in the `plexamp-control.c` file and recompile.
+
+## Raspberry Pi 5 Version
+
+An updated 3D printed case for use with the Raspberry Pi 5 is now found in the `stl/Plexamp_pi5_*.stl` files. There are a few other points to consider when working with the Raspberry Pi 5.
+
+One issue with the Raspberry Pi 5 is that the DSI connector for the LCD now uses a Type I flat flex cable (contacts on the same side) instead of the previous Type II cable (contacts on the opposite side). This means if routing it with the Raspberry Pi mounted the same way on the LCD the cable needs to be twisted to face the right way which is pretty difficult.
+
+In order to resolve this when using a Raspberry Pi 5 this design now rotates the LCD 180 degrees. This allows the cable to pass underneath the Raspberry Pi and be routed without twisting. The included `stl/Plexamp_pi5_adapter.stl` part is used to rotate the Raspberry Pi relative to the LCD as well as offset it so that it sits in the same position as before. It is necessary to flip the display orientation in software.
+
+For the Raspberry Pi 5 version the use of the IQudio DAC+ hat was removed. It was preferred to use a high quality external USB DAC in any case. The official [Raspberry Pi Active Cooler](https://www.raspberrypi.com/products/active-cooler/) was used instead of the custom fan solution which means the fan control scripts are not required for this version.
+
+The opportunity was taken to add a power button as well since the Raspberry Pi 5 has a header for connecting a momentary switch to use as a power button. This [Small Black SPST N/O Momentary Action](https://www.jaycar.com.au/small-black-spst-n-o-momentary-action/p/SP0700) button from a local supplier was used. Be sure to follow the [instructions](https://www.raspberrypi.com/documentation/computers/raspberry-pi-5.html#turning-it-off-and-back-on-again) for reducing the power consumption when shutdown.
+
+In the image below you can see the updated layout of components. Note the routing of the flat flex cable and use of the adapter plate to rotate the Raspberry Pi.
+
+![Raspberry Pi 5 Version](https://github.com/ardenpm/plexamp-pi/raw/main/images/photo_pi5_1.jpg)
